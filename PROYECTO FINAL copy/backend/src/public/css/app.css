@@ -1,0 +1,391 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container-home {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-home__table h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-home__table__pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.container-home__table__pagination div,
+.container-home__table__pagination span {
+    display: flex;
+    align-items: center;
+}
+
+.container-home__table__pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-home__table__pagination button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.button-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.container-home__cart div,
+.navigation div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para centrar la imagen */
+.product-thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-thumbnail {
+    width: 600px;
+
+    /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+.container-home__cart button,
+.navigation button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-home__cart button:hover,
+.navigation button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* REGISTER HANDLEBARS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.registration-form {
+    margin-bottom: 20px;
+}
+
+.registration-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.registration-form button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*REALTIMEPRODUCTS HANDLEBARS  */
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la tabla de productos */
+.container-products__table h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-products__table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.container-products__table th,
+.container-products__table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.container-products__table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container-products__table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el formulario de productos */
+.container-product__form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-product__form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.container-product__form form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-product__form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.container-product__form input[type="text"],
+.container-product__form input[type="number"],
+.container-product__form input[type="file"],
+.container-product__form textarea,
+.container-product__form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container-product__form input[type="submit"] {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container-product__form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para la eliminación de productos */
+.container-product__delete h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-product__delete div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-product__delete input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.container-product__delete button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-product__delete button:hover {
+    background-color: #c9302c;
+}
+
+/* Estilos para la navegación */
+.navigation div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navigation button:hover {
+    background-color: #555;
+}
+
+/* LOGIN HANDELBARS */
+section.login-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section.login-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+section.login-form input[type="email"],
+section.login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+section.login-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+section.login-form button:hover {
+    background-color: #555;
+}
