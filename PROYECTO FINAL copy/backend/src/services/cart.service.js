@@ -106,7 +106,6 @@ export default class CartService {
     }
 
     async #getCart(cartId) {
-        console.log(`Buscando carrito con ID: ${cartId}`);
         const cart = await this.#cartRepository.findOneById(cartId);
         if (!cart) {
             console.error(`Carrito con ID ${cartId} no encontrado`);
@@ -120,7 +119,6 @@ export default class CartService {
 
         for (const item of products) {
             try {
-                console.log(`Procesando producto ${item.product.toString()} con cantidad ${item.quantity}`);
                 const result = await this.#processProduct(item);
                 totalAmount += result.totalAmount;
                 if (!result.success) {
@@ -137,9 +135,7 @@ export default class CartService {
 
     async #processProduct(item) {
         const productId = item.product.toString();
-        console.log(`Buscando producto con ID: ${productId}`);
         const product = await this.#productService.findOneById(productId);
-        console.log(`Producto encontrado: ${JSON.stringify(product)}`);
 
         if (!product) {
             console.error(`Producto con ID ${productId} no encontrado`);
@@ -147,11 +143,7 @@ export default class CartService {
         }
 
         if (product.stock >= item.quantity) {
-            console.log(`Stock suficiente para el producto ${productId}. Cantidad solicitada: ${item.quantity}`);
             product.stock -= item.quantity;
-            console.log(`Actualizando stock para producto ${productId}. Nuevo stock: ${product.stock}`);
-
-            // Asegúrate de que product.id existe y es válido
             if (!product.id) {
                 console.error(`El ID del producto ${productId} es undefined`);
                 return { totalAmount: 0 };
@@ -160,7 +152,6 @@ export default class CartService {
             const updateResult = await this.#productService.updateOneById(product.id, { stock: product.stock });
 
             if (updateResult) {
-                console.log(`Producto ${productId} actualizado correctamente`);
                 return { success: true, totalAmount: product.price * item.quantity };
             } else {
                 console.error(`No se pudo actualizar el producto ${productId}`);
@@ -182,7 +173,6 @@ export default class CartService {
     }
 
     async #updateCartProducts(cart, productsNotPurchased) {
-        console.log(`Actualizando productos del carrito. Productos no comprados: ${productsNotPurchased}`);
         cart.products = cart.products.filter((item) => !productsNotPurchased.includes(item.product.toString()));
         await this.#cartRepository.save(cart);
     }

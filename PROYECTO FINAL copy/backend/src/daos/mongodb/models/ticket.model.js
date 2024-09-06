@@ -1,5 +1,3 @@
-// src/models/ticket.model.js
-
 import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema({

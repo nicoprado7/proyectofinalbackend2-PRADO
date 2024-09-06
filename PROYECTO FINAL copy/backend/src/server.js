@@ -56,7 +56,6 @@ server.use("*", (req, res) => {
 
 // Control de errores internos
 server.use((error, req, res) => {
-    console.log("Error:", error.message);
     res.status(500).send("<h1>Error 500</h1><h3>Se ha generado un error en el servidor</h3>");
 });
 

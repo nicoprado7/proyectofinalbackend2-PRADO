@@ -18,8 +18,8 @@ const cartSchema = new Schema({
         },
     ],
 }, {
-    timestamps: true, // Añade timestamps para generar createdAt y updatedAt
-    versionKey: false, // Elimina el campo __v de versión
+    timestamps: true,
+    versionKey: false,
 });
 
 // Agrega mongoose-paginate-v2 para habilitar las funcionalidades de paginación.

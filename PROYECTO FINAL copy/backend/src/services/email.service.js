@@ -20,7 +20,7 @@ export default class EmailService {
                 pass: process.env.SMTP_PASSWORD,
             },
             tls: {
-                rejectUnauthorized: false, // Ignorar certificados autofirmados
+                rejectUnauthorized: false,
             },
         });
     }
@@ -44,7 +44,6 @@ export default class EmailService {
                 html: content,
                 attachments,
             });
-            console.log("Correo enviado exitosamente.");
         } catch (error) {
             console.error("Error al enviar el correo:", error);
         }

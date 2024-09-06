@@ -102,20 +102,3 @@ export default class CartController {
         }
     }
 }
-/*     // Finalizar la compra de un carrito
-    async purchaseCart(req, res) {
-        try {
-            const { cid } = req.params;
-            const user = req.user;
-            // Verifica si el usuario está definido
-            if (!user || !user.email) {
-                return res.status(401).json({ status: false, message: "Usuario no autenticado" });
-            }
-            // Llama al servicio de compra de carrito
-            const purchaseResult = await this.#cartService.purchaseCart(cid, user.email);
-            res.status(200).json({ status: true, data: purchaseResult });
-        } catch (error) {
-            res.status(500).json({ status: false, message: error.message });
-        }
-    }
-} */

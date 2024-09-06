@@ -36,8 +36,8 @@ const productSchema = new Schema({
         trim: true,
     },
 }, {
-    timestamps: true, // Añade timestamps para generar createdAt y updatedAt
-    versionKey: false, // Elimina el campo __v de versión
+    timestamps: true,
+    versionKey: false,
 });
 
 // Middleware que elimina la referencia en los carritos al eliminar el producto.

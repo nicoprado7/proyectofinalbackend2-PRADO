@@ -29,7 +29,7 @@ const userSchema = new Schema({
             validator: async function (email) {
                 const countDocuments = await this.model("users").countDocuments({
                     _id: { $ne: this._id },
-                    email, // Atributo de verificación de duplicado
+                    email,
                 });
                 return countDocuments === 0;
             },
@@ -47,11 +47,11 @@ const userSchema = new Schema({
             values: ROLES,
             message: "Rol no válido",
         },
-        default: [STANDARD], // El valor por defecto es "STANDARD"
+        default: [STANDARD],
     },
 }, {
-    timestamps: true, // Añade timestamps para generar createdAt y updatedAt
-    versionKey: false, // Elimina el campo __v de versión
+    timestamps: true,
+    versionKey: false,
 });
 
 // Agrega mongoose-paginate-v2 para habilitar las funcionalidades de paginación.
