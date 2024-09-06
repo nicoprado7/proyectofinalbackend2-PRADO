@@ -16,6 +16,11 @@ const productSchema = new Schema({
         trim: true,
         maxLength: [ 250, "La descripción debe tener como máximo 250 caracteres" ],
     },
+    price: {
+        type: Number,
+        required: [ true, "El precio es obligatorio" ],
+        min: [ 0, "El precio debe ser un valor positivo" ],
+    },
     stock: {
         type: Number,
         required: [ true, "El stock es obligatorio" ],

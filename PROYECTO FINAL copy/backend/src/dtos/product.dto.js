@@ -7,6 +7,7 @@ export default class ProductDTO {
             title: model.title,
             description: model.description,
             stock: model.stock,
+            price: model.price,
             status: model.status,
             thumbnail: model.thumbnail,
         };
@@ -18,6 +19,7 @@ export default class ProductDTO {
             title: data.title,
             description: data.description,
             stock: Number(data.stock),
+            price: Number(data.price),
             status: convertToBoolean(data.status),
             thumbnail: data.thumbnail,
         };

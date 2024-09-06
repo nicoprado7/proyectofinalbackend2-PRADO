@@ -22,7 +22,7 @@ const ticketSchema = new mongoose.Schema({
     },
 });
 
-ticketSchema.pre("save", function (next) {
+ticketSchema.pre("validate", function (next) {
     if (!this.code) {
         // Genera un código único para el ticket
         this.code = `TCKT-${Math.random().toString(36).slice(2, 11).toUpperCase()}`;

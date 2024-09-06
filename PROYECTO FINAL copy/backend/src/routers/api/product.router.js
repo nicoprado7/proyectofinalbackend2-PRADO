@@ -16,7 +16,7 @@ export default class ProductRouter extends BaseRouter {
         const router = this.getRouter();
 
         // Ruta para obtener todos los productos
-        this.addGetRoute("/", [STANDARD], async (req, res) => {
+        this.addGetRoute("/", [ STANDARD, ADMIN ], async (req, res) => {
             try {
                 await this.#productController.getAll(req, res);
             } catch (error) {

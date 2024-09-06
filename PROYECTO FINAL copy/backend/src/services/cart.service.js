@@ -143,7 +143,7 @@ export default class CartService {
 
         if (!product) {
             console.error(`Producto con ID ${productId} no encontrado`);
-            return { success: false, totalAmount: 0 };
+            return { totalAmount: 0 };
         }
 
         if (product.stock >= item.quantity) {
@@ -154,7 +154,7 @@ export default class CartService {
             // Asegúrate de que product.id existe y es válido
             if (!product.id) {
                 console.error(`El ID del producto ${productId} es undefined`);
-                return { success: false, totalAmount: 0 };
+                return { totalAmount: 0 };
             }
 
             const updateResult = await this.#productService.updateOneById(product.id, { stock: product.stock });
@@ -164,11 +164,11 @@ export default class CartService {
                 return { success: true, totalAmount: product.price * item.quantity };
             } else {
                 console.error(`No se pudo actualizar el producto ${productId}`);
-                return { success: false, totalAmount: 0 };
+                return { totalAmount: 0 };
             }
         } else {
             console.error(`Stock insuficiente para el producto ${productId}. Stock disponible: ${product.stock}`);
-            return { success: false, totalAmount: 0 };
+            return { totalAmount: 0 };
         }
     }
     async #createTicketIfNecessary(totalAmount, userEmail) {
