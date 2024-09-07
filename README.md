@@ -6,8 +6,6 @@ Este proyecto es una aplicación backend para la gestión de carritos de compra,
 
 ## Tabla de Contenidos
 
-- [Proyecto de Carrito de Compras y Gestión de Productos](#proyecto-de-carrito-de-compras-y-gestión-de-productos)
-- [Autor: Nicolás Prado](#autor-nicolás-prado)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Descripción](#descripción)
   - [Características](#características)
