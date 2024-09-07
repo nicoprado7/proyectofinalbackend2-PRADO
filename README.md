@@ -56,12 +56,6 @@ El sistema permite la autenticación y el control de permisos, asegurando que so
 
 4. Configura las variables de entorno en un archivo `.env` (crea el archivo si no existe):
 
-    ```plaintext
-    MONGODB_URI=mongodb://localhost:27017/mi-base-de-datos
-    PORT=3000
-    JWT_SECRET=tu-secreto-jwt
-    ```
-
 5. Inicia el servidor:
 
     ```
