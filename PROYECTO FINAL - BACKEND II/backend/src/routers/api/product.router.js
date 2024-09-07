@@ -25,7 +25,7 @@ export default class ProductRouter extends BaseRouter {
         });
 
         // Ruta para obtener un producto por ID
-        this.addGetRoute("/:id", [STANDARD], async (req, res) => {
+        this.addGetRoute("/:id", [ STANDARD, ADMIN ], async (req, res) => {
             try {
                 await this.#productController.getById(req, res);
             } catch (error) {
