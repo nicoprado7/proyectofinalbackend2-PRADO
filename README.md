@@ -10,13 +10,13 @@ Este proyecto es una aplicación backend para la gestión de carritos de compra,
   - [Descripción](#descripción)
   - [Características](#características)
   - [Instalación](#instalación)
-    - [Ejemplo de rutas](#ejemplo-de-rutas)
-      - [Productos](#productos)
-      - [Carrito](#carrito)
+  - [Ejemplo de rutas](#ejemplo-de-rutas)
+  - [Productos](#productos)
+  - [Carrito](#carrito)
   - [Rutas Disponibles](#rutas-disponibles)
-    - [Productos](#productos-1)
-    - [Carritos](#carritos)
-    - [Tickets](#tickets)
+  - [Productos](#productos-1)
+  - [Carritos](#carritos)
+  - [Tickets](#tickets)
 
 ## Descripción
 
